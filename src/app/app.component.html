@@ -1,34 +1,48 @@
 <!--<app-title [subtitle]="subtitle"></app-title>-->
+
+<nav class="navbar navbar-expand-md navbar-inverse fixed-top bg-inverse">
+  <a class="navbar-brand" href="#">Dashboard</a>
+  <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
+    aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Settings</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Profile</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Help</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-12">
-      <!--<nav class="navbar navbar-default" role="navigation">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="#">Brand</a>
-        </div>
-      </nav>-->
-      hello
-    </div>
-  </div>
+    <nav class="col-sm-3 col-md-2 d-none d-sm-block bg-faded sidebar">
+      <ul class="nav nav-pills flex-column">
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="contact" routerLinkActive="active">Contact <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="crisis" routerLinkActive="active">Crisis Center</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="heroes" routerLinkActive="active">Heroes</a>
+        </li>
+      </ul>
+    </nav>
 
-  <div class="row">
-    <div class="col-md-3">
-      <div class="list-group">
-        <div>
-          <a class="list-group-item active" routerLink="contact" routerLinkActive="active">Contact</a>
-        </div>
-        <div>
-          <a class="list-group-item" routerLink="crisis" routerLinkActive="active">Crisis Center</a>
-        </div>
-        <div>
-          <a class="list-group-item" routerLink="heroes" routerLinkActive="active">Heroes</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-9">
-      <div class="panel panel-default">
-        <router-outlet></router-outlet>
-      </div>
-    </div>
+    <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3" role="main">
+      <router-outlet></router-outlet>
+    </main>
   </div>
 </div>
