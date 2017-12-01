@@ -5,9 +5,7 @@
   <h3 highlight>{{ contact.name | awesome }}</h3>
   <div class="form-group">
     <label for="name">Name</label>
-    <input type="text" class="form-control" required
-      [(ngModel)]="contact.name"
-        name="name"  #name="ngModel" >
+    <input type="text" class="form-control" required [(ngModel)]="contact.name" name="name" #name="ngModel">
     <div [hidden]="name.valid" class="alert alert-danger">
       Name is required
     </div>
@@ -16,4 +14,43 @@
   <button type="submit" class="btn btn-default" [disabled]="!contactForm.form.valid">Save</button>
   <button type="button" class="btn" (click)="next()" [disabled]="!contactForm.form.valid">Next Contact</button>
   <button type="button" class="btn" (click)="newContact()">New Contact</button>
+</form>
+
+<code>code block</code>
+<kbd>kbd block</kbd>
+<pre>
+  pre block
+  &lt;body&gt;&lt;/body&gt;
+</pre>
+
+<table class="table table-bordered">
+  <tbody>
+    <thead>
+      <tr>
+        <td>#</td>
+        <td>1</td>
+        <td>2</td>
+      </tr>
+    </thead>
+  </tbody>
+</table>
+
+<form>
+  <fieldset>
+    <legend>用户登录</legend>
+    <div class="form-group">
+      <label>账号</label>
+      <input type="email" class="form-control" placeholder="请输入您的用户名或email">
+    </div>
+    <div class="form-group">
+      <label>密码</label>
+      <input type="text" class="form-control" placeholder="请输入您的密码">
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox">记住密码</label>
+    </div>
+    <button type="submit" class="btn btn-primary">登录</button>
+    <button type="submit" class="btn btn-default">取消</button>
+    <button type="submit" class="btn btn-block">取消</button>
+  </fieldset>
 </form>

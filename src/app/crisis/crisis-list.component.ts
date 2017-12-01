@@ -5,7 +5,7 @@ import { Crisis,
 
 @Component({
   template: `
-    <h3 highlight>Crisis List</h3>
+    <h3 highlight><i class="icon-home"></i>Crisis List</h3>
     <div *ngFor='let crisis of crisises | async'>
       <a routerLink="{{'../' + crisis.id}}">{{crisis.id}} - {{crisis.name}}</a>
     </div>

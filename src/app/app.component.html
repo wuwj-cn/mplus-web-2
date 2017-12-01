@@ -1,9 +1,9 @@
 <!--<app-title [subtitle]="subtitle"></app-title>-->
 
-<nav class="navbar navbar-expand-md navbar-inverse fixed-top bg-inverse">
-  <a class="navbar-brand" href="#">Dashboard</a>
-  <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault"
-    aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
+  <a class="navbar-brand fa fa-github fa-lg" href="#">莫克工作室</a>
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+    aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -15,12 +15,6 @@
       <li class="nav-item">
         <a class="nav-link" href="#">Settings</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Profile</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Help</a>
-      </li>
     </ul>
   </div>
 </nav>
@@ -28,15 +22,26 @@
 <div class="container-fluid">
   <div class="row">
     <nav class="col-sm-3 col-md-2 d-none d-sm-block bg-faded sidebar">
-      <ul class="nav nav-pills flex-column">
+      <ul class="nav nav-pills nav-stacked flex-column">
         <li class="nav-item">
           <a class="nav-link active" routerLink="contact" routerLinkActive="active">Contact <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="crisis" routerLinkActive="active">Crisis Center</a>
+          <a class="nav-link" routerLink="crisis" routerLinkActive="active"><i class="icon-home"></i>Crisis Center</a>
         </li>
         <li class="nav-item">
+          <span class="glyphicon glyphicon-align-left"> </span>
           <a class="nav-link" routerLink="heroes" routerLinkActive="active">Heroes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="collapse" data-target="#demo" href="javascript:void(0);">
+            <i class="fa fa-arrows-v "></i>
+            <span class="sidebar-nav-item-icon fa fa-github fa-lg">下拉菜单</span> <i class="fa fa-fw fa-caret-down"></i>
+          </a>
+          <ul id="demo" class="collapse list-unstyled">
+            <li ><a class="nav-link"  routerLink="heroes" routerLinkActive="active">子菜单1</a></li>
+            <li class="nav-item"><a class="nav-link" href="javascript:void(0);">子菜单2</a></li>
+          </ul>
         </li>
       </ul>
     </nav>
@@ -46,3 +51,8 @@
     </main>
   </div>
 </div>
+
+<hr>
+<footer>
+  <p>&copy; 莫克工作室</p>
+</footer>
